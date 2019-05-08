@@ -1,4 +1,4 @@
-# robot_brain
+# robot_eyes
 ROS package for flexbe behaviours
 
 ## Description 
