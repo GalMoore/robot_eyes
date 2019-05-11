@@ -1,5 +1,5 @@
 # robot_eyes
-ROS package for flexbe behaviours
+ROS package for computer vision
 
 ## Description 
 This node receives X data and outputs Y for the Z node. 
