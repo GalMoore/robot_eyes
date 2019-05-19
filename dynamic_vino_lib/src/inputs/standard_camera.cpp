@@ -24,8 +24,8 @@
 bool Input::StandardCamera::initialize()
 {
   setInitStatus(cap.open(1));
-  if(!cap.isOpened())
-    setInitStatus(cap.open(0));
+  //if(!cap.isOpened())
+   // setInitStatus(cap.open(0));
   
   setWidth((size_t)cap.get(CV_CAP_PROP_FRAME_WIDTH));
   setHeight((size_t)cap.get(CV_CAP_PROP_FRAME_HEIGHT));

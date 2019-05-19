@@ -1,16 +1,16 @@
 Pipelines:
 - name: object
-  inputs: [RealSenseCamera]
+  inputs: [StandardCamera]
   infers:
     - name: ObjectDetection
-      model: /opt/openvino_toolkit/open_model_zoo/model_downloader/object_detection/common/mobilenet-ssd/caffe/output/FP32/mobilenet-ssd.xml
+      model: /opt/intel/computer_vision_sdk_2018.5.455/deployment_tools/model_downloader/object_detection/common/mobilenet-ssd/caffe/output/FP32/mobilenet-ssd.xml
       engine: CPU
-      label: to/be/set/xxx.labels
+      label: /opt/intel/computer_vision_sdk_2018.5.455/deployment_tools/model_downloader/object_detection/common/mobilenet-ssd/caffe/output/FP32/mobilenet-ssd.labels
       batch: 16
   outputs: [ImageWindow, RosTopic, RViz]
   confidence_threshold: 0.5
   connects:
-    - left: RealSenseCamera
+    - left: StandardCamera
       right: [ObjectDetection]
     - left: ObjectDetection
       right: [ImageWindow]
