@@ -1,6 +1,6 @@
 Pipelines:
 - name: object
-  inputs: [StandardCamera]
+  inputs: [RealSenseCameraTopic]
   infers:
     - name: ObjectDetection
       model: /opt/intel/computer_vision_sdk_2018.5.455/deployment_tools/model_downloader/object_detection/common/mobilenet-ssd/caffe/output/FP32/mobilenet-ssd.xml
@@ -10,7 +10,7 @@ Pipelines:
   outputs: [ImageWindow, RosTopic, RViz]
   confidence_threshold: 0.5
   connects:
-    - left: StandardCamera
+    - left: RealSenseCameraTopic
       right: [ObjectDetection]
     - left: ObjectDetection
       right: [ImageWindow]
