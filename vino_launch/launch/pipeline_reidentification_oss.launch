@@ -8,7 +8,10 @@
         <remap from ="/openvino_toolkit/reidentified_persons" to = "/ros_openvino_toolkit/reidentified_persons" />
         <remap from ="/openvino_toolkit/images" to = "/ros_openvino_toolkit/image_rviz" />
   </node>
+
+    <!--
   <node name="rviz" pkg="rviz" type="rviz" required="true" output="screen">
         <param name="default_rviz" value="$(arg default_rviz)" />
   </node>
+    -->
 </launch>

@@ -59,7 +59,9 @@
 #include "opencv2/opencv.hpp"
 #include "sample/utility.hpp"
 #include <people_msgs/ReidentificationSrv.h>
+#include <iostream>
 
+using namespace std;
 
 bool parseAndCheckCommandLine(int argc, char** argv)
 {
@@ -77,7 +79,7 @@ bool parseAndCheckCommandLine(int argc, char** argv)
 int main(int argc, char** argv)
 {
   ros::init(argc, argv, "image_segmentation_servier");
-  
+  cout<<" gal"<<endl;
   if (!parseAndCheckCommandLine(argc, argv))  return 0;
 
   ros::param::param<std::string>("~param_file", FLAGS_config, "/param/image_segmentation_server.yaml");

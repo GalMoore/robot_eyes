@@ -23,14 +23,17 @@
 #include <ros/package.h>
 #include <ros/ros.h>
 #include "opencv2/opencv.hpp"
-
+#include <iostream>
 #include <people_msgs/ReidentificationSrv.h>
-
+using namespace std;
 
 
 int main(int argc, char ** argv)
 {
-  ros::init(argc, argv, "image_reidentification_client"); 
+  ros::init(argc, argv, "image_reidentification_client");
+  // cerr<<"GAL"<<endl; 
+
+  // ROS_INFO("GAL IN PIPELINE WITH PARAMAs ");
 
   ros::NodeHandle n;
 

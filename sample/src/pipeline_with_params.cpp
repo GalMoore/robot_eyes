@@ -83,6 +83,8 @@ int main(int argc, char** argv)
 {
 
   ros::init(argc, argv, "sample_with_params"); 
+  ROS_INFO("GAL IN PIPELINE WITH PARAMAs ");
+
   
   // register signal SIGINT and signal handler
   signal(SIGINT, signalHandler);

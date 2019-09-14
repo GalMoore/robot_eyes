@@ -37,7 +37,7 @@ bool Input::RealSenseCameraTopic::initialize()
   
   std::shared_ptr<image_transport::ImageTransport> it =
 	        std::make_shared<image_transport::ImageTransport>(nh_);
-  sub_ = it->subscribe("/camera/color/image_raw", 1, &RealSenseCameraTopic::cb,
+  sub_ = it->subscribe("/camera/image_raw", 1, &RealSenseCameraTopic::cb,
 		                           this); 
   return true;
 }

@@ -1,6 +1,6 @@
 Pipelines:
 - name: object
-  inputs: [StandardCamera]
+  inputs: [RealSenseCameraTopic]
   infers:
     - name: ObjectDetection
       model: /opt/intel/computer_vision_sdk/deployment_tools/intel_models/person-detection-retail-0013/FP32/person-detection-retail-0013.xml
